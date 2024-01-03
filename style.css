@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  /* Accent */
+
+  --blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: "Poppins";
+  background-image: url(images/bg-intro-mobile.png);
+  background-color: var(--red);
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 50px 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.desc {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.desc h1 {
+  font-size: 1.65em;
+}
+
+.desc p {
+  font-size: 0.9em;
+}
+
+.shadow {
+  box-shadow: 0px 8px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.try-it {
+  padding: 17px 50px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.try-it span {
+  font-weight: 700;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+label {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  gap: 15px;
+  border: darkBlue;
+}
+
+form input {
+  padding: 15px;
+  border: 1px solid var(--grayishBlue);
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+form button {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-color: var(--green);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.terms-and-services {
+  font-size: 0.6em;
+  color: var(--grayishBlue);
+  padding: 0 30px;
+}
+
+.terms-and-services span {
+  color: var(--red);
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url(images/bg-intro-desktop.png);
+  }
+  main {
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 80%;
+    flex-direction: row;
+  }
+
+  .desc {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .desc h1 {
+    font-size: 3em;
+  }
+
+  .desc p {
+    font-size: 0.9em;
+    line-height: 2;
+  }
+}
